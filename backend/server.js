@@ -15,3 +15,7 @@ app.get('/',  (req, res) => {
 app.use("/api/auth", authRoutes)
 
 app.listen(PORT, () => console.log(`server running on http://localhost:${PORT}`));
+
+
+// npm run dev - (from frontend dir)
+// npm run server - from root dir

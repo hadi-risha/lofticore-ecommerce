@@ -4,11 +4,13 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    tailwindcss(),
-    react()
-  ],
+  plugins: [tailwindcss(), react()],
   server: {
     historyApiFallback: true, // Ensure proper routing
   },
-})
+  build: {
+    rollupOptions: {
+      external: ["react-icons"],
+    },
+  },
+});
